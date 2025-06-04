@@ -1,0 +1,48 @@
+<!-- templates/wishlist.html -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Wishlist</title>
+    <style>
+        body { font-family: Arial, sans-serif; background: #f0f0f0; padding: 20px; }
+        h1 { color: #333; }
+        .movie-card {
+            background: white;
+            border-radius: 8px;
+            box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+            padding: 16px;
+            margin: 12px 0;
+            display: flex;
+            align-items: center;
+        }
+        .movie-card img {
+            height: 150px;
+            margin-right: 20px;
+        }
+        .movie-info {
+            max-width: 600px;
+        }
+        .movie-info h3 {
+            margin: 0 0 10px 0;
+        }
+    </style>
+</head>
+<body>
+    <h1>Your Wishlist</h1>
+    {% if wishlist %}
+        {% for movie in wishlist %}
+        <div class="movie-card">
+            <img src="{{ movie.poster }}" alt="{{ movie.title }}">
+            <div class="movie-info">
+                <h3>{{ movie.title }}</h3>
+                <p>{{ movie.description }}</p>
+            </div>
+        </div>
+        {% endfor %}
+    {% else %}
+        <p>No movies in your wishlist yet.</p>
+    {% endif %}
+    <a href="{{ url_for('index') }}">← Back to Home</a>
+</body>
+</html>

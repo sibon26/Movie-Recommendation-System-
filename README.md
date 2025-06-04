@@ -1,2 +1,6 @@
-# Movie-Recommendation-System-
-A content-based movie recommendation system using machine learning and NLP. Built with TF-IDF vectorization and cosine similarity on a Netflix dataset, it provides personalized suggestions via a Flask web app and Streamlit dashboard.
+# Movie_Reccomendation_System
+Movie_Reccomendation_System
+![image](https://github.com/user-attachments/assets/976f4bdc-13d5-4268-ad87-d84fe540dcea)
+
+The reccomendations will look like this:
+![image](https://github.com/user-attachments/assets/edc6be01-f957-4a99-8938-b8330264e82c)
